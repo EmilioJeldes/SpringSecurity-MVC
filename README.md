@@ -173,3 +173,15 @@ http
 </html>
 ````
 
+##EnableGlobalMethodSecurity
+To secure service or controller methods with `Secure` or `PreAuthorize`
+````java
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+    
+    ...
+    
+}
+````
