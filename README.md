@@ -120,7 +120,7 @@ public class LoginController {
 </html>
 ```
 
-##Implement Custom 403 error page
+## Implement Custom 403 error page
 #### 1. Register the view controller
 ````java
 @Configuration
@@ -173,7 +173,7 @@ http
 </html>
 ````
 
-##EnableGlobalMethodSecurity
+## EnableGlobalMethodSecurity
 To secure service or controller methods with `Secure` or `PreAuthorize`
 ````java
 @Configuration
