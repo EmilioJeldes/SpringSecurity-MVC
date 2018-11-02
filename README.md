@@ -42,7 +42,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 4. Register an AuthenticationManager and pass the users in memory
 
 ## Implement custom Login page
-####1. In the SecurityConfiguration class
+#### 1. In the SecurityConfiguration class
 ````java
 http
     ...
@@ -52,7 +52,7 @@ http
     ...
 ````
 
-####2. Create LoginController class to register the get method to redirect to the new login view
+#### 2. Create LoginController class to register the get method to redirect to the new login view
 ````java
 @RestController
 @RequestMapping('/login')
@@ -74,7 +74,7 @@ public class LoginController {
 ````
 * returns the view login.html or redirects to the index page in case there's already a user logged in.
 
-####3. Create view login into resources/templates using thymeleaf and bootstrap 4
+#### 3. Create view login into resources/templates using thymeleaf and bootstrap 4
 ```html
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
@@ -121,7 +121,7 @@ public class LoginController {
 ```
 
 ##Implement Custom 403 error page
-####1. Register the view controller
+#### 1. Register the view controller
 ````java
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {
@@ -134,7 +134,7 @@ public class MvcConfig implements WebMvcConfigurer {
 }
 ````
 
-####2. Add the configuration in the SecurityConfig class
+#### 2. Add the configuration in the SecurityConfig class
 ````java
 http
     ...
@@ -142,7 +142,7 @@ http
     .exceptionHandling().accessDeniedPage("/error_403");
 ````
 
-####3. Create the view error_403.html in resources/templates
+#### 3. Create the view error_403.html in resources/templates
 
 ````html
 <!DOCTYPE html>
